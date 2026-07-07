@@ -116,6 +116,15 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\newcommand{\skillCategory}[2]{
+  \small{
+    \begin{tabularx}{\textwidth}{@{}p{1.8in}X@{}}
+      \textbf{#1} & #2 \\
+    \end{tabularx}
+  }
+  \vspace{2pt}
+}
+
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -132,8 +141,8 @@
 
 \input{sections/header}
 \input{sections/summary/english}
-% \input{sections/skills}
-% \input{sections/experience}
+\input{sections/skills/english}
+\input{sections/experience/english}
 % \input{sections/projects}
 % \input{sections/education}
 % \input{sections/languages}
