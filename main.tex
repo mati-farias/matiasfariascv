@@ -1,5 +1,8 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -13,6 +16,7 @@
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \usepackage{fontawesome}
+\usepackage{accsupp}
 \input{glyphtounicode}
 
 
@@ -21,7 +25,7 @@
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\usepackage[sfdefault]{plex-sans}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -49,8 +53,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -60,13 +64,13 @@
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-1pt}}
   }
 }
 
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{4pt}\item
+  \vspace{5pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -110,13 +114,15 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\newcommand{\decorativeIcon}[1]{\BeginAccSupp{method=escape,ActualText={}}#1\EndAccSupp{}}
+
 \newcommand{\skillCategory}[2]{
   \small{
     \begin{tabularx}{\textwidth}{@{}p{1.8in}X@{}}
       \textbf{#1} & #2 \\
     \end{tabularx}
   }
-  \vspace{2pt}
+  \vspace{3pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
